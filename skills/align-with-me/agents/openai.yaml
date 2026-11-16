@@ -1,0 +1,5 @@
+interface:
+  display_name: "Align with me"
+  short_description: "Align a design and write its docs"
+policy:
+  allow_implicit_invocation: false

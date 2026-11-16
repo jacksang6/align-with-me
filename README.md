@@ -1,6 +1,8 @@
 # Align With Me
 
-One skill, one job: get **aligned** with your agent before a single line of code is written. `/grill-tree` interviews you relentlessly, in rounds, until every branch of your plan is settled - as a decision tree.
+One job: get **aligned** with your agent before a single line of code is written. Run `/align-with-me` and it composes two skills - `/grill-tree` interviews you relentlessly, in rounds, until every branch of your plan is settled (as a decision tree), and `/domain-modeling` turns the settled decisions into shared docs (ADR's, a glossary) as you go.
+
+Just want the interview? `/grill-tree` also works standalone.
 
 ## Why This Skill Exists
 
@@ -65,11 +67,11 @@ npx skills@latest add mattpocock/skills -a <agent>  # cursor, opencode, devin, w
 npx skills@latest add jacksang6/align-with-me -a <agent>
 ```
 
-When the installer asks which skills to take, include `grill-tree`.
+When the installer asks which skills to take, include both `align-with-me` and `grill-tree`.
 
-### 3. Run `/grill-tree`
+### 3. Run `/align-with-me`
 
-Bring a plan, a design, an interface, or just an idea. Answer the rounds. Confirm the closing plan.
+Bring a plan, a design, an interface, or just an idea. Answer the rounds. Confirm the closing plan - the docs grow alongside it. (Or run `/grill-tree` for the interview alone.)
 
 ## Reference
 
@@ -77,15 +79,15 @@ Bring a plan, a design, an interface, or just an idea. Answer the rounds. Confir
 
 **User-invoked**
 
+- **align-with-me**: The orchestrator. Composes `/grill-tree` + `/domain-modeling` into one alignment session: interview first, docs (ADR's, glossary) as you go. Answering style: short sentences, simple words, consistent terms - ASD-STE100-inspired.
 - **grill-tree**: Grill the user relentlessly about a plan, decision, or idea until a shared understanding is reached - mapped as a decision tree with design, logic, UI/UX and doc branches. UI rounds run a local decision console with rendered evidence and annotations.
 
 ### Dependencies (provided by mattpocock/skills)
 
-`grill-tree` invokes these at closing time, after you confirm the plan:
-
 | Skill | Used for |
 |---|---|
-| `/ask-matt` | Assess the confirmed task and recommend the execution path |
+| `/domain-modeling` | `align-with-me` runs it alongside the interview to build the glossary and ADR's |
+| `/ask-matt` | `grill-tree` invokes it at closing time, after you confirm the plan, to recommend the execution path |
 | `/to-spec` | Turn the confirmed plan into a spec |
 | `/to-tickets` | Break the spec into tracer-bullet tickets |
 | `/implement-spec` | Implement the whole spec on one integration branch |
