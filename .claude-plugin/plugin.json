@@ -1,0 +1,23 @@
+{
+  "name": "align-with-me",
+  "version": "1.0.0",
+  "description": "Alignment-first grilling skills for AI coding agents: relentless tree-shaped interview rounds and an orchestrator that pairs grilling with domain-modeling docs.",
+  "author": {
+    "name": "Jack S",
+    "url": "https://github.com/jacksang6"
+  },
+  "homepage": "https://github.com/jacksang6/align-with-me",
+  "repository": "https://github.com/jacksang6/align-with-me",
+  "license": "MIT",
+  "keywords": [
+    "alignment",
+    "grilling",
+    "skills",
+    "spec",
+    "domain-modeling"
+  ],
+  "skills": [
+    "./skills/align-with-me",
+    "./skills/grill-tree"
+  ]
+}

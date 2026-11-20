@@ -1,5 +1,7 @@
 # Align With Me
 
+![skills.sh](https://skills.sh/b/jacksang6/align-with-me)
+
 One job: get **aligned** with your agent before a single line of code is written. Run `/align-with-me` and it composes two skills - `/grill-tree` interviews you relentlessly, in rounds, until every branch of your plan is settled (as a decision tree), and `/domain-modeling` turns the settled decisions into shared docs (ADR's, a glossary) as you go.
 
 Just want the interview? `/grill-tree` also works standalone.
@@ -63,8 +65,17 @@ npx skills@latest add mattpocock/skills -a <agent>  # cursor, opencode, devin, w
 
 ### 2. Install this repo
 
+**Claude Code** (plugin, updates itself)
+
 ```
-npx skills@latest add jacksang6/align-with-me -a <agent>
+claude plugin marketplace add jacksang6/align-with-me
+claude plugin install align-with-me@jacksang6
+```
+
+**Any other agent, or editable files** (manual updates)
+
+```
+npx skills@latest add jacksang6/align-with-me -a <agent>  # cursor, opencode, devin, windsurf, amp, pi; omit -a to choose
 ```
 
 When the installer asks which skills to take, include both `align-with-me` and `grill-tree`.

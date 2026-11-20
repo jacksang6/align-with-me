@@ -1,0 +1,23 @@
+{
+  "name": "jacksang6",
+  "owner": {
+    "name": "Jack S",
+    "url": "https://github.com/jacksang6"
+  },
+  "description": "Alignment-first grilling skills for AI coding agents, as an installable Claude Code plugin.",
+  "plugins": [
+    {
+      "name": "align-with-me",
+      "source": "./",
+      "description": "Alignment-first grilling skills: tree-shaped interview rounds (design/logic/UI/doc) plus an orchestrator that pairs grilling with domain-modeling docs.",
+      "category": "engineering",
+      "keywords": [
+        "alignment",
+        "grilling",
+        "skills",
+        "spec",
+        "domain-modeling"
+      ]
+    }
+  ]
+}
