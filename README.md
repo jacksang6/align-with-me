@@ -6,6 +6,10 @@ One job: get **aligned** with your agent before a single line of code is written
 
 Just want the interview? `/grill-tree` also works standalone.
 
+![The decision console: one card per decision, options sorted by probability, keyboard-first](docs/images/decision-console.png)
+
+UI/UX decisions run through a **local decision console** - every option carries a rendered capture of the post-change state, never a text description of it. [中文首发稿](docs/launch-post-zh.md) · [Show & tell post](docs/show-and-tell-en.md)
+
 ## Why This Skill Exists
 
 > "Plans are worthless, but planning is everything."
