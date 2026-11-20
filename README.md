@@ -6,10 +6,6 @@ One job: get **aligned** with your agent before a single line of code is written
 
 Just want the interview? `/grill-tree` also works standalone.
 
-![The decision console: one card per decision, options sorted by probability, keyboard-first](docs/images/decision-console.png)
-
-UI/UX decisions run through a **local decision console** - every option carries a rendered capture of the post-change state, never a text description of it.
-
 ## Why This Skill Exists
 
 > "Plans are worthless, but planning is everything."
@@ -28,12 +24,46 @@ Every round routes through one table into one of four branch forms:
 
 | Branch | What it covers | Channel |
 |---|---|---|
-| Design | Roles, trade-offs, architecture, parameters | Question tool |
-| Logic | If/then, loops, state changes, calculations, hand-offs | Question tool + `.xlsx` evidence |
+| Design | Roles, trade-offs, architecture, parameters | Decision tree, question rounds |
+| Logic | If/then, loops, state changes, calculations, hand-offs | Logic tree, `.xlsx` evidence |
 | UI / UX | Layout, components, flow, visual style | A local **decision console** (`serve_decision.py`): one card per decision, rendered evidence, write-ins, screenshots, annotations |
 | Doc | Wording changes to an existing document | Question tool + diff |
 
 The session closes only when the frontier is empty and nothing is left silently assumed. The closing plan is presented once, confirmed by you, and only then handed to the execution workflow.
+
+## The Three UI/UX Highlights
+
+### 1. A console that showcases every decision
+
+UI/UX rounds run through a **local decision console**: one card per decision, options sorted by probability with a recommendation, keyboard-first (1-9 / arrows / Enter), and a live alignment table on top:
+
+![Decision console](docs/images/console-en.png)
+
+### 2. Wireframe evidence, drawn for you
+
+Every option carries **its own wireframe** - the console draws numbered red evidence boxes that show exactly where the decision lands. You decide on the region, never on a vague text description:
+
+![Wireframe evidence](docs/images/console-wireframe-en.png)
+
+### 3. Annotate and caption, then send it back
+
+You can edit the real page directly: draw boxes, write captions, hit **Save and replace** - your annotation replaces that option's evidence and rides back with the answer:
+
+![Annotate and caption](docs/images/console-annotate-en.png)
+
+## The Trees
+
+### Logic tree
+
+Logic questions (if/then, state changes, conditions) render as an ASCII tree with evidence anchors - every node traces to where it lands in code:
+
+![Logic tree](docs/images/logic-tree-en.png)
+
+### Decision tree
+
+Design decisions land as decision nodes with the chosen option, what it settles, and a paired acceptance criterion:
+
+![Decision tree](docs/images/decision-tree-en.png)
 
 ## Installation (30-second setup)
 
@@ -79,7 +109,7 @@ claude plugin install align-with-me@jacksang6
 **Any other agent, or editable files** (manual updates)
 
 ```
-npx skills@latest add jacksang6/align-with-me -a <agent>  # cursor, opencode, devin, windsurf, amp, pi; omit -a to choose
+npx skills@latest add jacksang6/align-with-me -a <agent>
 ```
 
 When the installer asks which skills to take, include both `align-with-me` and `grill-tree`.
