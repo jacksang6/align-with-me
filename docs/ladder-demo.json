@@ -1,4 +1,0 @@
-{"ladder": [
-  {"version": "r1", "title": "骨架三区", "decision": "S1 单页发布流", "changes": "顶栏 + 表单 + 预览区", "snapshot": "images/cards/card-1.png"},
-  {"version": "r2", "title": "决策台接入", "decision": "S3 交互决策三连", "changes": "自动保存 / 横幅提示 / 可见性", "snapshot": "images/decision-console.png"}
-]}

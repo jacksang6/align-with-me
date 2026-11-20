@@ -1,3 +1,10 @@
 __pycache__/
 *.pyc
 .claude/
+
+# internal working files — never push
+docs/function-spec-demo*
+docs/ladder-demo.json
+docs/manual-update.md
+docs/anthropic-directory-submission.md
+scripts/md2zhihu_html.py
