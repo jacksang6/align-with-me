@@ -8,3 +8,12 @@ docs/ladder-demo.json
 docs/manual-update.md
 docs/anthropic-directory-submission.md
 scripts/md2zhihu_html.py
+
+# marketing/working files — keep local only, never push
+docs/*
+!docs/images/
+!docs/images/decision-console.png
+scripts/make_cards.py
+scripts/make_wireframes.py
+scripts/make_icon.py
+skills-lock.json
